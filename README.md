@@ -1,9 +1,10 @@
 Hippy Python Module
 ==================
 
-Hippy is a Python® module designed to communicate with SoHal.  The devices and
+Hippy is a Python® module designed to communicate with SoHal (the HP Sprout
+Immersive Computer's Hardware Abstraction Layer).  The devices and
 methods in hippy mirror the SoHal spec, but hippy handles all of the websocket
-communication for the user.
+communication and JSONRPC-2.0 protocol for the user.
 
 Note that the objects in the hippy module are not thread safe.
 
@@ -22,10 +23,12 @@ p.close()
 ## Installation ##
 
 ### Python ###
-To install hippy, you first need to install the 64 bit version of Python 3.7.1
-from https://www.python.org/downloads/release/python-371/
-> <B>Note</B>: When installing Python, it is helpful if you select the "Add
-> Python to environment variables" option.
+To install hippy, you first need to install Python. Hippy has been tested
+with the 64 bit version of Python 3.7.7 which can be found here:
+https://www.python.org/downloads/release/python-377/
+Other versions of Python may work, but they have not been tested.
+> <B>Note</B>: When installing Python on Windows, it is helpful if you select
+> the "Add Python to environment variables" option.
 
 
 ### Hippy ###
@@ -43,7 +46,6 @@ not already installed, it will be installed automatically.
 > such as `No matching distribution found`, you may need to provide the proxy
 > using:
 > <BR>  `pip install Hippy-x.x.x.x-py3-none-any.whl --proxy=your_proxy_here `
-
 
 Once all three items are installed, you're ready to start using hippy.  First
 launch the soHal.exe and then run your Python script or start sending

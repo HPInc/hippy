@@ -20,7 +20,9 @@ if __name__ == '__main__':
     setup(
         name='Hippy',
         version=today_str,
+        url='https://github.com/HPInc/hippy',
         description='HP Sprout Python Client',
         packages=['hippy'],
         install_requires=['websockets'],
+        license='MIT',
         )
