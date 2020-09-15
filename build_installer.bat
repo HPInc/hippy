@@ -1,5 +1,8 @@
 @echo off
 
+rem Helper batch file to delete existing build output and make a new build
+rem (which includes the wheel file, license file, and sample code)
+
 set directories=(".\.cache"^
  ".\build"^
  ".\dist"^
@@ -14,6 +17,8 @@ for %%d in %directories% do (
 )
 
 python setup.py bdist_wheel
+
+copy ".\LICENSE" ".\dist\"
 
 if not exist .\dist\sample mkdir .\dist\sample
 copy ".\tests\depth_camera_stream.py" ".\dist\sample\"
